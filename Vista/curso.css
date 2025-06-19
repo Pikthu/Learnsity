@@ -1,0 +1,149 @@
+/* curso.css */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: white;
+  }
+  
+  .curso-container {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  .sidebar {
+    width: 240px;
+    background-color: #444;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .sidebar button,
+  .sidebar .cert-btn,
+  .sidebar .nav-icon {
+    width: 90%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 25px;
+    border: none;
+    background-color: #eee;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+  }
+  
+  .sidebar button:hover,
+  .sidebar .cert-btn:hover,
+  .sidebar .nav-icon:hover {
+    background-color: #ddd;
+  }
+  
+  .sidebar img.cert-img {
+    width: 90%;
+    margin: 15px 0;
+  }
+  
+  .content-area {
+    flex: 1;
+    padding: 30px;
+    background-color: #111;
+  }
+  
+  .video-section {
+    margin-bottom: 40px;
+  }
+  
+  .video-section h2,
+  .video-section h3 {
+    margin: 0 0 10px;
+  }
+  
+  video {
+    width: 100%;
+    border: 2px solid #3399ff;
+    border-radius: 4px;
+  }
+  
+  .comments-section h3 {
+    margin-bottom: 20px;
+  }
+  
+  .comment-box {
+    background-color: #666;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .comment-box img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .comment-box input,
+  .comment-box textarea {
+    flex: 1;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    resize: none;
+  }
+  
+  .comment-box textarea {
+    height: 60px;
+  }
+  
+  /* Icon buttons */
+  .sidebar .nav-icon {
+    justify-content: center;
+    font-size: 18px;
+  }
+  
+  .sidebar .nav-icon span {
+    margin-left: 10px;
+  }
+  .certificacion-button {
+    text-align: center; /* Aligns the text horizontally in the middle */
+    display: flex; /* Use flexbox to align content if icon and text are separate elements */
+    flex-direction: column; /* Stacks the icon and text vertically */
+    justify-content: center; /* Centers content horizontally within the flex container */
+    align-items: center; /* Centers content vertically within the flex container */
+    /* You might need to adjust padding or other spacing if the button size changes */
+}
+
+/* If the "Certificación" text is inside a specific element within the button (e.g., a span) */
+.certificacion-button span {
+    text-align: center;
+    width: 100%; /* Ensure the text span takes the full width available */
+}
+/* Add this to your CSS file */
+
+/* Assuming 'main-content-layout' is the parent container that holds the video area and comments area */
+.main-content-layout {
+    display: flex; /* Ensure it's a flex container */
+    flex-direction: column; /* Change the direction to column to stack items vertically */
+    align-items: center; /* Optional: Centers the video and comments horizontally if they don't take full width */
+    gap: 20px; /* Optional: Adds space between the video and comments sections */
+    width: 100%; /* Ensure this container takes full available width */
+}
+
+/* You might want to ensure the comments section takes the full width available below the video */
+.comentario-section {
+    width: 100%; /* Make the comments section take the full width below the video */
+    /* You may also adjust its margin-top if 'gap' on the parent isn't enough */
+    /* margin-top: 30px; */
+}
+
+/* Ensure the video area also behaves correctly if you set align-items: center on parent */
+.video-and-description-area {
+    width: 100%; /* Ensure the video area also takes full width */
+}

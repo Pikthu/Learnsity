@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Learnsity</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Vista/styles.css"> 
+    <link rel="stylesheet" href="../Vista/forms.css">
+    <style>
+        .error-message {
+            color: #ff8a8a; font-size: 12px; margin-top: -15px;
+            margin-bottom: 10px; display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div onclick="location.href='index.html'" style="cursor: pointer;">
+            <img src="../Recursos/img/image1.png" alt="Logo de Learnsity">
+        </div>
+        <div class="search-container">
+            <button>Explorar Cursos</button>
+            <input type="text" placeholder="Buscar">
+            <button>🔍</button>
+        </div>
+        <div id="nav-auth-buttons" class="nav-buttons"></div>
+    </header>
+
+    <main class="form-main">
+        <div class="form-container">
+            <h2>Crear una Cuenta</h2>
+            <form id="registroForm" onsubmit="handleRegister(event)" novalidate>
+                <label for="nombre-completo">Nombre Completo:</label>
+                <input type="text" id="nombre-completo" name="Nombre_Completo" placeholder="Ingrese su nombre completo" required>
+                <label for="nickname">Nickname:</label>
+                <input type="text" id="nickname" name="Nickname" placeholder="Máximo 16 caracteres" required>
+                <div id="nicknameError" class="error-message"></div>
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" id="correo" name="Correo" placeholder="ejemplo@dominio.com" required>
+                <div id="correoError" class="error-message"></div>
+                <label for="fecha-nacimiento">Fecha de Nacimiento:</label>
+                <input type="date" id="fecha-nacimiento" name="Fecha_Nacimiento" required>
+                <div id="fechaError" class="error-message"></div>
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" placeholder="Mínimo 6 caracteres, 1 mayúscula, 1 número, 1 símbolo" required>
+                <div id="passwordError" class="error-message"></div>
+                <label for="confirm-password">Confirmar Contraseña:</label>
+                <input type="password" id="confirm-password" name="confirm_password" placeholder="Repita su contraseña" required>
+                <div id="confirmPasswordError" class="error-message"></div>
+                <button type="submit">Registrarse</button>
+            </form>
+            <p>¿Ya tienes una cuenta? <a href="login.html">Inicia Sesión</a></p>
+        </div>
+    </main>
+
+    <script src="../Control/auth.js"></script>
+</body>
+</html>

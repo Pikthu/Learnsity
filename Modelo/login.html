@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - Learnsity</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Vista/styles.css">
+    <link rel="stylesheet" href="../Vista/forms.css">
+</head>
+<body>
+    <header>
+        <div onclick="location.href='index.html'" style="cursor: pointer;">
+            <img src="../Recursos/img/image1.png" alt="Logo de Learnsity">
+        </div>
+        <div class="search-container">
+            <button>Explorar Cursos</button>
+            <input type="text" placeholder="Buscar">
+            <button>🔍</button>
+        </div>
+        <div id="nav-auth-buttons" class="nav-buttons"></div>
+    </header>
+
+    <main class="form-main">
+        <div class="form-container">
+            <h2>Iniciar Sesión</h2>
+            <form id="loginForm" onsubmit="handleLogin(event)" novalidate>
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" id="correo" name="Correo" placeholder="Ingrese su correo electrónico" required>
+
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" placeholder="Ingrese su contraseña" required>
+
+                <button type="submit">Ingresar</button>
+            </form>
+            <p>¿No tienes una cuenta? <a href="registro.html">Regístrate</a></p>
+        </div>
+    </main>
+    
+    <script src="../Control/auth.js"></script>
+</body>
+</html>

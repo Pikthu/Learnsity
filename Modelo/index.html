@@ -5,35 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Learnsity</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="..\Vista\styles.css">
 </head>
 <body>
+
   <header>
-    <img src="image1.jpg" alt="Logo de Learnsity">
+    <div onclick="location.href='index.html'" style="cursor: pointer;">
+     <img src="../Recursos/img/image1.png" alt="Logo de Learnsity">
+    </div>
     <div class="search-container">
       <button>Explorar Cursos</button>
-      <input type="text" placeholder="Curso de Java">
+      <input type="text" placeholder="Buscar">
       <button>🔍</button>
     </div>
-    <div class="nav-buttons">
-      <button onclick="location.href='foro.html'">Foro</button>
-      <button>Iniciar Sesión</button>
-      <button onclick="openSidebar()">Registrarse</button>
-    </div>
-  </header>
+    <div id="nav-auth-buttons" class="nav-buttons">
+      </div>
+</header>
   <main>
     <div class="column">
       <h2>📌 CURSOS NUEVOS</h2>
       <div class="course">
-        <img src="image2.jpg" alt="Curso de Python">
-        <h3>Curso principiante en Python</h3>
+        <div onclick="location.href='descripcion.html'" class="curso-card" style="cursor: pointer;">
+        <img src="..\Recursos\img\image2.png" alt="Curso de Python">
+          <h3>Curso Python para principiantes</h3>
+        </div>
       </div>
       <div class="course">
-        <img src="image3.jpg" alt="Curso de IA">
+        <img src="..\Recursos\img\image3.png" alt="Curso de IA">
         <h3>Inicia en el mundo de la IA y de las redes...</h3>
       </div>
       <div class="course">
-        <img src="image4.jpg" alt="Curso de SQL">
+        <img src="..\Recursos\img\image4.png" alt="Curso de SQL">
         <h3>Bases de datos SQL</h3>
       </div>
     </div>
@@ -41,47 +43,21 @@
       <h2>👍 CURSOS RECOMENDADOS</h2>
       <div class="course">
         <div class="rating">👍 98.56%</div>
-        <img src="image5.jpg" alt="Curso de Java">
+        <img src="..\Recursos\img\image5.png" alt="Curso de Java">
         <h3>Curso intermedio en Java</h3>
       </div>
       <div class="course">
         <div class="rating">👍 93.12%</div>
-        <img src="image6.jpg" alt="Curso de Unity">
+        <img src="..\Recursos\img\image6.png" alt="Curso de Unity">
         <h3>Desarrollo de videojuegos con Unity</h3>
       </div>
       <div class="course">
         <div class="rating">👍 90.76%</div>
-        <img src="image7.jpg" alt="Curso de C#">
+        <img src="..\Recursos\img\image7.png" alt="Curso de C#">
         <h3>Curso de C# desde cero</h3>
       </div>
     </div>
   </main>
-
-  <div id="sidebar" class="sidebar">
-    <form class="sidebar-form">
-      <label for="nombre">Nombres:</label>
-      <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre...">
-
-      <label for="nickname">Nickname:</label>
-      <input type="text" id="nickname" name="nickname" placeholder="Ingrese su nickname...">
-
-      <label for="correo">Correo:</label>
-      <input type="email" id="correo" name="correo" placeholder="Ingrese su correo">
-
-      <button type="submit">Registrarse</button>
-      <p>¿Ya tienes una cuenta? <a href="#">Ingresa a Learnsity</a></p>
-      <button type="button">Iniciar Sesión</button>
-    </form>
-    <button class="close-btn" onclick="closeSidebar()">&laquo;</button>
-  </div>
-
-  <script>
-    function openSidebar() {
-      document.getElementById("sidebar").style.right = "0";
-    }
-    function closeSidebar() {
-      document.getElementById("sidebar").style.right = "-100%";
-    }
-  </script>
+  <script src="..\Control\auth.js"></script>
 </body>
 </html>

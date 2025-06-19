@@ -6,7 +6,7 @@ body {
   }
   
   .foro-header {
-    background: #fff;
+    background: #EBEBEB;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -15,7 +15,7 @@ body {
   }
   
   .foro-header img {
-    height: 50px;
+    height: 80px;
   }
   
   .nav-bar button {

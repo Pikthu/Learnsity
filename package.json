@@ -1,0 +1,27 @@
+{
+  "name": "learnsity-backend",
+  "version": "1.0.0",
+  "description": "Backend server for the Learnsity project.",
+  "main": "api/server.js",
+  "scripts": {
+    "start": "node api/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/005Yun/Estructura-de-Software.git"
+  },
+  "bugs": {
+    "url": "https://github.com/005Yun/Estructura-de-Software/issues"
+  },
+  "homepage": "https://github.com/005Yun/Estructura-de-Software#readme"
+}
